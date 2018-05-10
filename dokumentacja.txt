@@ -1,0 +1,84 @@
+API Restowe dla serwisu filmowego.
+
+Dodaj film:
+POST /rest/filmweb/films
+{
+	"title" : "Nic œmiesznego"
+}
+{
+	"title" : "Kiler"
+}
+{
+	"title" : "Wszyscy jesteœmy Chrystusami"
+}
+{
+    "title" : "Miœ"
+}
+{
+	"title" : "Dzieñ Œwira"
+}
+
+Wyœwietl wszystkie filmy:
+GET /rest/filmweb/films
+
+Wyœwietl konkretny film:
+GET /rest/filmweb/films/{filmId}
+
+Aktualizuj informacje o filmie:
+PUT /rest/filmweb/films/{filmId}
+{
+    "title" : "Tato"
+}
+
+Usuñ konkretnny film:
+DELETE /rest/filmweb/films/{filmId}
+
+Dodaj ocenê do konkretnego filmu:
+POST /rest/filmweb/films/{filmId}/rate
+{
+    "rate" : 6
+}
+{
+    "rate" : 10
+}
+
+Wyœwietl ocenê konkretnego filmu:
+GET /rest/filmweb/films/{filmId}/rate
+
+Dodaj komentarz do konkretnego filmu:
+POST /rest/filmweb/films/{filmId}/comments
+{
+	"content" : "Dobry film."
+}
+{
+	"content" : "Bardzo ciekawy."
+}
+{
+	"content" : "Lubie to."
+}
+
+Wyœwietl komentarze konkretnego filmu:
+GET /rest/filmweb/films/{filmId}/comments
+
+Usuñ komentarz do konkretnego filmu:
+DELETE /rest/filmweb/films/{filmId}/comments/{commentId}
+
+Dodaj aktora:
+POST /rest/filmweb/actors
+{
+    "name" : "Marek",
+	"surname" : "Kondrat"
+}
+{
+    "name" : "Micha³",
+	"surname" : "Koterski"
+}
+
+Dodaj aktora do filmu:
+POST /rest/filmweb/actors/{actorId}/{filmId}
+
+Wyœwietl aktorów konkretnego filmu:
+GET /rest/filmweb/films/{filmId}/actors
+
+Wyœwietl filmy konkretnego aktora:
+GET /rest/filmweb/actors/{actorId}/films
