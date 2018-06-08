@@ -381,7 +381,7 @@
 		{
 			"name": "/rest/filmweb/films/{filmId}/actors",
 			"request": {
-				"url": "/rest/filmweb/films/5/actors",
+				"url": "http://localhost:8080/filmwebapp/rest/filmweb/films/5/actors",
 				"method": "GET",
 				"header": [],
 				"body": {
